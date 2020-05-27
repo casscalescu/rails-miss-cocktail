@@ -1,0 +1,49 @@
+.home-banner {
+  position: relative;
+
+  &__background {
+    display: flex;
+  }
+
+  &__image {
+    width: 50vw;
+    background-size: cover;
+    height: calc(100vh - 61px);
+
+    &--left {
+      background-image: image-url("banner-left.jpg");
+    }
+
+    &--right {
+      background-image: image-url("banner-right.jpg");
+    }
+  }
+
+  &__background, &__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__content {
+    z-index: 10;
+  }
+
+  &__heading {
+    font-size: 6em;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 100px;
+
+    & span {
+      font-family: 'Pompiere';
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+

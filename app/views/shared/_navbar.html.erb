@@ -1,0 +1,17 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-custom">
+  <!-- Logo linking to landing page -->
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <i class="fas fa-cocktail"></i>
+  <% end %>
+
+  <!-- Search bar -->
+  <div class="centre-search">
+    <div class="navbar-nav navbar-form"></div>
+  </div>
+
+  <!-- Nav Links -->
+  <div class="navbar-links">
+    <%= link_to "Browse", cocktails_path, class: "nav-item nav-link centre-link #{'active' if current_page?(cocktails_path)}" %>
+    <%= link_to "Add a Cocktail", new_cocktail_path, class: "nav-item nav-link centre-link #{'active' if current_page?(new_cocktail_path)}" %>
+  </div>
+</div>

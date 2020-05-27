@@ -1,0 +1,41 @@
+<h1><%= @cocktail.name %></h1>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill if @cocktail.photo.attached? %>
+
+
+<% @cocktail.doses.each do |dose| %>
+<h3><%= dose.ingredient.name %> - <%= dose.description %>
+<%= link_to dose_path(dose), method: :delete do %>
+  <i class="fas fa-trash-alt"></i>
+  <% end %>
+</h3>
+<% end %>
+
+<!-- Add dose modal -->
+<%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+
+
+<%= link_to "Delete", cocktail_path(@cocktail),
+      method: :delete %>
+
+<%= link_to "Back to all cocktails", cocktails_path %>
+
+<h2>Reviews</h2>
+<% if @cocktail.reviews.empty? %>
+  <p>Be the first to write a review</p>
+<% else %>
+  <ul>
+    <% @cocktail.reviews.each do |review| %>
+      <li>
+        <% count = 0 %>
+        <% 5.times do %>
+          <i class="<%= review.rating > count ? 'fas fa-star' : 'far fa-star' %>"></i>
+          <% count += 1 %>
+        <% end %>
+        <%= review.content %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Add a review</h2>
+<%= render 'reviews/new', cocktail: @cocktail, review: @review %>

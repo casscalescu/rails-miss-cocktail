@@ -1,0 +1,9 @@
+<div class="main-container">
+  <div class="grid">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="drink-card"><%= cocktail.name %></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
