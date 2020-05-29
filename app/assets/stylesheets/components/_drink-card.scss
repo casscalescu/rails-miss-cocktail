@@ -1,5 +1,39 @@
 .drink-card {
   height: 380px;
   width: 266px;
-  border: 1px solid black;
+  position: relative;
+
+  &__photo {
+    width: 266px;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  &__button {
+    border: none;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 1.2em;
+    height: 35px;
+    padding: 0 40px;
+    display: none;
+    z-index: 9;
+    position: absolute;
+    top: 172px;
+    left: 40px;
+
+    &:hover {
+      color: white;
+      display: block;
+    }
+
+    &:focus {
+      outline: none;
+      background: black;
+    }
+  }
+
+  &__photo:hover ~ &__button {
+    display: block;
+  }
 }
