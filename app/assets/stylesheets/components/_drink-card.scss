@@ -16,7 +16,7 @@
     font-size: 1.2em;
     height: 35px;
     padding: 0 40px;
-    display: none;
+    visibility: hidden;
     z-index: 9;
     position: absolute;
     top: 172px;
@@ -24,7 +24,7 @@
 
     &:hover {
       color: white;
-      display: block;
+      visibility: visible;
     }
 
     &:focus {
@@ -34,6 +34,6 @@
   }
 
   &__photo:hover ~ &__button {
-    display: block;
+    visibility: visible;
   }
 }
