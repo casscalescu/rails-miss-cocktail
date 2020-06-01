@@ -1,6 +1,7 @@
-<h3>Add a new dose</h3>
 <%= simple_form_for [cocktail, dose] do |f| %>
-  <%= f.association :ingredient  %>
-  <%= f.input :description %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= button_tag type: 'submit' do %>
+    <i class="fas fa-plus"></i>
+  <% end %>
+  <%= f.input :description, placeholder: 'Amount', label: false, wrapper_html: { class: 'main-container__input' } %>
+  <%= f.association :ingredient, prompt: 'Ingredient', label: false, wrapper_html: { class: 'main-container__input' } %>
 <% end %>

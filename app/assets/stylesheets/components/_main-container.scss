@@ -1,5 +1,94 @@
 .main-container {
   width: 900px;
   margin: 0 auto;
-  padding: 28px 0;
+  padding: 68px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 0 auto;
+
+    & > * {
+      width: 50%;
+    }
+  }
+
+  &__link {
+    margin-bottom: 24px;
+
+    & a {
+      color: black;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 3.6em;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 68px;
+  }
+
+  &__title {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 4px;
+
+    & a {
+      width: 10%;
+      color: red;
+      font-size: 1.2em;
+    }
+  }
+
+  &__ingredient {
+    width: 35%;
+    font-size: 1.2em;
+    font-weight: 100;
+  }
+
+  &__photo {
+    height: 550px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+  &__input {
+    width: 35%;
+    padding-right: 15px;
+
+    & input, select {
+      border-radius: 4px;
+      border-color: $light-gray;
+      color: $mid-gray;
+
+      &:focus {
+        border-color: $mid-gray;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+#new_dose {
+  width: 100%;
+  display: flex;
+
+  & button {
+    background: none;
+    border: none;
+    color: $green;
+    font-size: 1.2em;
+    padding: 0;
+    width: 10%;
+    text-align: left;
+  }
 }
