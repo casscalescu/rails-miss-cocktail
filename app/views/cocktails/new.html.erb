@@ -1,7 +1,18 @@
-<h1>Create a new cocktail</h1>
+<div class="main-container">
+  <div class="cocktail-form">
+    <h1 class="cocktail-form__title">Add a new cocktail</h1>
 
-<%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Save", class: "btn btn-primary" %>
-<% end %>
+    <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name,
+          input_html: { class: 'cocktail-form__input' },
+          label_html: { :class => 'cocktail-form__label' },
+          wrapper_html: { class: 'cocktail-form__new-cocktail-name' }
+        %>
+        <%= f.input :photo, as: :file,
+          label_html: { :class => 'cocktail-form__photo'},
+          wrapper_html: { class: 'cocktail-form__new-cocktail-photo' }
+        %>
+        <button class="button button--primary button--center cocktail-form__button"><%= f.submit "Save", class: "button--input" %></button>
+    <% end %>
+  </div>
+</div>

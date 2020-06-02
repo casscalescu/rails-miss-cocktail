@@ -76,11 +76,17 @@
       }
     }
   }
+
+  &__text {
+    font-size: 1.2em;
+    font-weight: 100;
+  }
 }
 
 #new_dose {
   width: 100%;
   display: flex;
+  margin-bottom: 68px;
 
   & button {
     background: none;

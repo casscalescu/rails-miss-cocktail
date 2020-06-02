@@ -1,0 +1,57 @@
+.cocktail-form {
+  width: 450px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 2.6em;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__input {
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid $light-gray;
+
+    &:focus, &:hover {
+      box-shadow: none;
+      border: solid 1px $orange;
+    }
+  }
+
+  &__label {
+    font-size: 1em;
+    color: $mid-gray;
+
+    & abbr {
+      display: none;
+    }
+  }
+
+  &__new-cocktail-name {
+    position: relative;
+
+    & label {
+      position: absolute;
+      top: -7px;
+      left: 18px;
+      background: white;
+      padding: 0px 6px;
+    }
+  }
+
+  &__new-cocktail-photo {
+
+    & label {
+
+      & abbr {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 28px;
+  }
+
+}

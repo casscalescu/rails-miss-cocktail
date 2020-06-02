@@ -1,5 +1,5 @@
 .button {
-  height: 45px;
+  height: 40px;
   font-weight: 500;
   width: fit-content;
   background: none;
@@ -11,6 +11,30 @@
 
   &:hover {
     text-decoration: none;
+
+    & input {
+      color: white;
+      transition: 0.8s;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--input {
+    border: none;
+    background: none;
+    padding: 0;
+    text-transform: uppercase;
+
+    &:hover {
+      color: white;
+    }
   }
 
   &--primary {
@@ -40,5 +64,4 @@
       }
     }
   }
-
 }
