@@ -62,19 +62,22 @@
   }
 
   &__input {
-    width: 35%;
-    padding-right: 15px;
+    margin-bottom: 0;
+    margin-right: 14px;
 
     & input, select {
+      border: 1px solid $mid-gray;
       border-radius: 4px;
-      border-color: $light-gray;
-      color: $mid-gray;
+
+      &:hover {
+        border-color: $orange;
+      }
 
       &:focus {
-        border-color: $mid-gray;
-        box-shadow: none;
+        border: 1px solid $orange;
       }
     }
+
   }
 
   &__text {

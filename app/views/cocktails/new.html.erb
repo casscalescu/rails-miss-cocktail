@@ -14,7 +14,6 @@
         <img src="#" class="form__image-preview">
         <span class="form__file-name"></span>
         <%= f.input :photo, as: :file,
-          required: true,
           input_html: { class: "form__input-file", accept: "image/*" },
           label_html: { class: "form__label-file form__label-file--icon" },
                 wrapper_html: { class: "form__wrapper form__wrapper--file" }

@@ -22,15 +22,15 @@
       <% if @cocktail.reviews.empty? %>
         <p class="main-container__text">Be the first to write a review</p>
       <% else %>
-        <ul>
+        <ul class="reviews">
           <% @cocktail.reviews.each do |review| %>
-            <li>
+            <li class="reviews__list">
               <% count = 0 %>
               <% 5.times do %>
                 <i class="<%= review.rating > count ? 'fas fa-star' : 'far fa-star' %>"></i>
                 <% count += 1 %>
               <% end %>
-              <%= review.content %>
+              <p class="reviews__content"><%= review.content %></p>
             </li>
           <% end %>
         </ul>
