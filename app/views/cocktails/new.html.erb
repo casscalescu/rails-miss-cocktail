@@ -1,16 +1,24 @@
 <div class="main-container">
-  <div class="cocktail-form">
-    <h1 class="cocktail-form__title">Add a new cocktail</h1>
+  <div class="form">
+    <h1 class="form__title">Add a new cocktail</h1>
 
     <%= simple_form_for @cocktail do |f| %>
         <%= f.input :name,
-          input_html: { class: 'cocktail-form__input' },
-          label_html: { :class => 'cocktail-form__label' },
-          wrapper_html: { class: 'cocktail-form__new-cocktail-name' }
+          required: true,
+          input_html: { class: 'form__input-text' },
+          label_html: { class: 'form__label-text' },
+          wrapper_html: { class: 'form__wrapper form__wrapper--text' }
         %>
+
+        <span class="form__label-file-text">Upload a Photo*</span>
+        <img src="#" class="form__image-preview">
+        <span class="form__file-name"></span>
         <%= f.input :photo, as: :file,
-          label_html: { :class => 'cocktail-form__photo'},
-          wrapper_html: { class: 'cocktail-form__new-cocktail-photo' }
+          required: true,
+          input_html: { class: "form__input-file", accept: "image/*" },
+          label_html: { class: "form__label-file form__label-file--icon" },
+                wrapper_html: { class: "form__wrapper form__wrapper--file" }
+
         %>
         <button class="button button--primary button--center cocktail-form__button"><%= f.submit "Save", class: "button--input" %></button>
     <% end %>
