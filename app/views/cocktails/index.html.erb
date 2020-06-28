@@ -1,13 +1,15 @@
-<div class="main-container">
-  <div class="grid">
+<div class="container">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail), class: "grid__link" do %>
-        <div class="drink-card">
-          <%= cl_image_tag cocktail.photo.key, class: "drink-card__photo" %>
-          <div class="button drink-card__button">Make it yourself</div>
-        </div>
-        <h4 class="grid__name"><%= cocktail.name %></h4>
-      <% end %>
+      <div class="col-6 col-lg-4">
+        <%= link_to cocktail_path(cocktail), class: "card__link" do %>
+          <div class="card">
+            <%= cl_image_tag cocktail.photo.key, class: "card__photo" %>
+            <div class="button card__button">Make it yourself</div>
+            <h4 class="card__drink-name"><%= cocktail.name %></h4>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
